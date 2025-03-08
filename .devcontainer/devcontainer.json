@@ -1,0 +1,59 @@
+{
+    "name": "DockerPython",                    // VScodeがコンテナに接続したときのタイトルを自由に設定
+    "dockerComposeFile": "docker-compose.yml",  // docker-conpose.ymlファイルを指定
+    "service": "python",                        // docker-conpose.ymlファイル内に記載したサービス名を指定
+    "workspaceFolder": "/workspace/src",         // VScode接続時に開くフォルダを指定
+    "customizations": {
+        "vscode": {
+            "extensions": [                     // コンテナ作成時にインストールする拡張機能を記載　
+                "ms-toolsai.datawrangler",  // DataWrangler
+                "hediet.vscode-drawio", //Draw.io Integration
+                "janisdd.vscode-edit-csv",  //EditCSV
+                "github.copilot",   //GithubCopilot
+                "oderwat.indent-rainbow",   //indent-rainbow
+                "ms-ceintl.vscode-language-pack-ja",    //Japanese Language Pack
+                "yzhang.markdown-all-in-one",   //markdown all in one
+                "shd101wyy.markdown-preview-enhanced",  //markdown preview enhanced
+                "mechatroner.rainbow-csv",  //rainbow csv
+                "gruntfuggly.todo-tree",    //todo tree
+                "vscode-icons-team.vscode-icons",   //vscode-icons
+                "christian-kohler.path-intellisense", //path補完
+                "mhutchie.git-graph",   //git-graph
+                "ms-python.python",             // python拡張機能
+                "ms-toolsai.jupyter"            // jupyter拡張機能
+            ],
+            "settings": {                       // VScodeの設定を記載
+                "workbench.iconTheme": "vscode-icons",
+                "hediet.vscode-drawio.resizeImages": null,
+                "todo-tree.general.tagGroups": {
+                    "TODO": ["%% TODO"],
+                    "[]":["[ ]", "%% []", "%% [ ]"]
+                },
+                "markdown-preview-enhanced.enablePreviewZenMode": true,
+                "markdown-preview-enhanced.codeBlockTheme": "github.css",
+                "todo-tree.highlights.customHighlight": {
+                    "BUG": {
+                        "icon": "bug"
+                    },
+                    "HACK": {
+                        "icon": "tools"
+                    },
+                    "FIXME": {
+                        "icon": "flame"
+                    },
+                    "XXX": {
+                        "icon": "x"
+                    },
+                    "[ ]": {
+                        "icon": "issue-draft"
+                    },
+                    "[x]": {
+                        "icon": "issue-closed"
+                    }
+                },
+                "explorer.confirmDragAndDrop": false,
+                "files.autoSave": "afterDelay"  // ファイルのオートセーブ
+            }
+        }
+    }
+}
