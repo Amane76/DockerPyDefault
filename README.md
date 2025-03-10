@@ -42,6 +42,7 @@ This environment is configured for my personal development projects and learning
 ## VSCode Extensions
 
 Includes essential extensions for Python development:
+
 - Python
 - Jupyter
 - GitHub Copilot
