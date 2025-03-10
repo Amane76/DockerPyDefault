@@ -7,9 +7,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# ローカルPCのファイルをコンテナのカレントディレクトリにコピー
-# COPY requirements.txt .
-
 # curlをインストール->apt-getでインストールしたパッケージのキャッシュを削除
 RUN apt-get update && \
     apt-get install -y git curl && \
