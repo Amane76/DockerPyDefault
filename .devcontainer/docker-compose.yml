@@ -1,6 +1,6 @@
 services:
   python: # サービスの名前を定義
-    image: python:step3dockerfile-1.0 # イメージのrepository名:tag名を指定
+    image: python:dockerfile-2.0 # イメージのrepository名:tag名を指定
     build:  # Dockerfileを相対パスで指定
       context: .
       dockerfile: Dockerfile
