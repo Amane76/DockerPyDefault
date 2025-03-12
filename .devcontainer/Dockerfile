@@ -1,5 +1,5 @@
 # DockerHubのベースとなるイメージを指定
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 # gitをインストール->apt-getでインストールしたパッケージのキャッシュを削除
 RUN apt-get update && \
