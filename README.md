@@ -31,7 +31,7 @@ This environment is configured for my personal development projects and learning
 
 ## Container Specifications
 
-- Base image: `python:3.9-slim`
+- Base image: `python:3.13-slim`
 - Package manager: Poetry
 - Working directory: `/workspace`
 - Pre-installed tools:
