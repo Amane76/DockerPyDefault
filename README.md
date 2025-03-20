@@ -10,7 +10,7 @@ This environment is configured for my personal development projects and learning
 
 ## Features
 
-- Python 3.9 environment
+- Python 3.13 environment
 - Poetry for dependency management
 - Pre-configured VSCode extensions for Python development
 - Git integration
