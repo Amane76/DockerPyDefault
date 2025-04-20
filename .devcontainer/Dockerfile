@@ -1,15 +1,12 @@
 # DockerHubのベースとなるイメージを指定
 FROM python:3.13-slim
 
-# gitをインストール->apt-getでインストールしたパッケージのキャッシュを削除
+# git, curlをインストール->apt-getでインストールしたパッケージのキャッシュを削除
 RUN apt-get update && \
-    apt-get install -y git && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# curlをインストール->apt-getでインストールしたパッケージのキャッシュを削除
-RUN apt-get update && \
-    apt-get install -y git curl && \
+    apt-get install -y \
+    git \
+    curl \
+    build-essential && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
