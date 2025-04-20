@@ -1,6 +1,6 @@
 # Personal Python Development Environment
 
-Created by Amane for personal use.
+Created by Tabetaaaaaaa for personal use.
 
 A containerized Python development environment using Docker and VSCode Dev Containers. This development setup is specifically customized for my personal projects and learning environment.
 

@@ -1,5 +1,5 @@
 {
-    "name": "DockerPython",                    // VScodeがコンテナに接続したときのタイトルを自由に設定
+    "name": "python3.13-20250420",                    // VScodeがコンテナに接続したときのタイトル=コンテナ名
     "dockerComposeFile": "docker-compose.yml",  // docker-conpose.ymlファイルを指定
     "service": "python",                        // docker-conpose.ymlファイル内に記載したサービス名を指定
     "workspaceFolder": "/workspace",         // VScode接続時に開くフォルダを指定

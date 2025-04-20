@@ -1,10 +1,10 @@
 services:
   python: # サービスの名前を定義
-    image: python:dockerfile-2.0 # イメージのrepository名:tag名を指定
+    image: python:dockerfile-3.13-base # イメージのrepository名:tag名を指定
     build:  # Dockerfileを相対パスで指定
       context: .
       dockerfile: Dockerfile
-    container_name: python1.0  # コンテナ名を指定
+    container_name: python3.13-20250420  # コンテナ名を指定
     working_dir: /workspace # コンテナの作業ディレクトリを明示
     volumes:  # volumeのマウント
       - work:/workspace
