@@ -1,12 +1,12 @@
 # Personal Python Development Environment
 
-Created by Tabetaaaaaaa for personal use.
-
-A containerized Python development environment using Docker and VSCode Dev Containers. This development setup is specifically customized for my personal projects and learning environment.
+Created by Tabetaaaaaaa.
+A containerized basic Python development environment using Docker and VSCode Dev Containers.
 
 ## Purpose
 
-This environment is configured for my personal development projects and learning purposes. It includes my preferred settings, tools, and VSCode extensions that I commonly use for Python development. Not intended for production or shared development environments.
+This container contains only the basic tools used for python development.
+You can clone it and add the tools and settings you need as needed.
 
 ## Features
 
@@ -14,7 +14,6 @@ This environment is configured for my personal development projects and learning
 - Poetry for dependency management
 - Pre-configured VSCode extensions for Python development
 - Git integration
-- Jupyter notebook support
 
 ## Prerequisites
 
@@ -26,8 +25,21 @@ This environment is configured for my personal development projects and learning
 
 1. Clone this repository
 2. Open in VSCode
-3. Click "Reopen in Container" when prompted
-4. Start developing!
+3. Execute the following commands in Terminal.
+
+   ``` bash
+    cd ./.devcontainer
+    docker-compose build
+    docker-compose up -d
+    ```
+
+4. Click "Reopen in Container" when prompted. Or execute a following command.
+
+   ``` bash
+    docker-compose exec python /bin/bash
+    ```
+
+5. Start developing!
 
 ## Container Specifications
 
@@ -37,19 +49,15 @@ This environment is configured for my personal development projects and learning
 - Pre-installed tools:
   - Git
   - Curl
-  - Python development tools
-
-## VSCode Extensions
-
-Includes essential extensions for Python development:
-
-- Python
-- Jupyter
-- GitHub Copilot
-- Git Graph
-- Markdown support
-- CSV tools
-- And more...
+  - basic-essentiail
+  - VSCode Extentions
+    - Python
+    - Jupyter
+    - GitHub Copilot
+    - Git Graph
+    - Markdown support
+    - CSV tools
+    - And more...
 
 ## Notes
 

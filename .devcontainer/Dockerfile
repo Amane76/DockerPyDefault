@@ -1,7 +1,9 @@
-# DockerHubのベースとなるイメージを指定
+# --- DockerHubのベースとなるイメージを指定 ---
 FROM python:3.13-slim
 
-# git, curlをインストール->apt-getでインストールしたパッケージのキャッシュを削除
+# --- 基本ツールのインストール ---
+# git, curl, build-essential
+# ->apt-getでインストールしたパッケージのキャッシュを削除
 RUN apt-get update && \
     apt-get install -y \
     git \
@@ -10,7 +12,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# pipのアップデート(おそらく使わないが・・・)
+# --- Python開発環境の構築 ---
+# pipのインストールとアップグレード
 RUN pip install --upgrade pip
 
 # Poetryのインストールとパスの設定
@@ -22,5 +25,19 @@ RUN curl -sSL https://install.python-poetry.org | python - && \
 # Poetryが仮想環境を生成しないようにする
 RUN poetry config virtualenvs.create false
 
-# コンテナ起動時に実行するコマンドを指定
+# 配布用にする場合は以下を追加 ＋ docker-compose.ymlのvolumes設定を削除
+# 現在は開発用なので、コピーではなくバインドマウントしています。
+
+# # 作業ディレクトリを設定
+# WORKDIR /workspace
+# # ホストのプロジェクトルートの内容をコンテナの /workspace にコピー
+# COPY . /workspace
+# # Poetry の依存関係をインストール
+# RUN poetry install
+
+# --- コンテナの設定 ---
+# ポート指定
+# EXPOSE 8501
+
+# --- コンテナ起動時の設定 ---
 CMD ["/bin/bash"]
